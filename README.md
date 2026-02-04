@@ -1,21 +1,18 @@
 <div align="center">
 
-# GET SHIT DONE
+# Custom GSD for Antigravity
 
-**A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code, OpenCode, and Gemini CLI.**
+**A personalized, model-agnostic fork of the "Get Shit Done" system.**
 
-**Solves context rot — the quality degradation that happens as Claude fills its context window.**
+**Adapted for Antigravity, Gemini, OpenCode, and Claude.**
 
-[![npm version](https://img.shields.io/npm/v/get-shit-done-cc?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-shit-done-cc)
-[![npm downloads](https://img.shields.io/npm/dm/get-shit-done-cc?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/get-shit-done-cc)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5JJgD5svVS)
-[![GitHub stars](https://img.shields.io/github/stars/glittercowboy/get-shit-done?style=for-the-badge&logo=github&color=181717)](https://github.com/glittercowboy/get-shit-done)
+[![Custom Fork](https://img.shields.io/badge/GSD-Custom_Fork-blue?style=for-the-badge)](https://github.com/Rheinmir/custom-gsd-for-antigravity)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
 <br>
 
 ```bash
-npx get-shit-done-cc
+npx -y github:Rheinmir/custom-gsd-for-antigravity
 ```
 
 **Works on Mac, Windows, and Linux.**
@@ -26,151 +23,63 @@ npx get-shit-done-cc
 
 <br>
 
-*"If you know clearly what you want, this WILL build it for you. No bs."*
-
-*"I've done SpecKit, OpenSpec and Taskmaster — this has produced the best results for me."*
-
-*"By far the most powerful addition to my Claude Code. Nothing over-engineered. Literally just gets shit done."*
+*"Refined for personal workflow. Model-agnostic. Ready for Antigravity."*
 
 <br>
 
-**Trusted by engineers at Amazon, Google, Shopify, and Webflow.**
-
-[Why I Built This](#why-i-built-this) · [How It Works](#how-it-works) · [Commands](#commands) · [Why It Works](#why-it-works)
+[How It Works](#how-it-works) · [Commands](#commands) · [Why It Works](#why-it-works)
 
 </div>
 
 ---
 
-## Why I Built This
+## What This Is
 
-I'm a solo developer. I don't write code — Claude Code does.
+This is a **custom fork** of the excellent [Get Shit Done](https://github.com/glittercowboy/get-shit-done) system by TÂCHES.
 
-Other spec-driven development tools exist; BMAD, Speckit... But they all seem to make things way more complicated than they need to be (sprint ceremonies, story points, stakeholder syncs, retrospectives, Jira workflows) or lack real big picture understanding of what you're building. I'm not a 50-person software company. I don't want to play enterprise theater. I'm just a creative person trying to build great things that work.
-
-So I built GSD. The complexity is in the system, not in your workflow. Behind the scenes: context engineering, XML prompt formatting, subagent orchestration, state management. What you see: a few commands that just work.
-
-The system gives Claude everything it needs to do the work *and* verify it. I trust the workflow. It just does a good job.
-
-That's what this is. No enterprise roleplay bullshit. Just an incredibly effective system for building cool stuff consistently using Claude Code.
-
-— **TÂCHES**
-
----
-
-Vibecoding has a bad reputation. You describe what you want, AI generates code, and you get inconsistent garbage that falls apart at scale.
-
-GSD fixes that. It's the context engineering layer that makes Claude Code reliable. Describe your idea, let the system extract everything it needs to know, and let Claude Code get to work.
-
----
-
-## Who This Is For
-
-People who want to describe what they want and have it built correctly — without pretending they're running a 50-person engineering org.
+**Key Modifications:**
+1.  **Model Agnostic:** Terminology updated from "Claude" to "The Agent" or "GSD System".
+2.  **Universal Profiles:** Replaced Opus/Sonnet/Haiku with **High Reasoning**, **Standard**, and **Fast** tiers. This makes it easier to use with Gemini, OpenCode, or other models in Antigravity.
+3.  **Antigravity Support:** First-class status line and integration for Antigravity.
 
 ---
 
 ## Getting Started
 
+To install this custom version directly from GitHub:
+
 ```bash
-npx get-shit-done-cc
+npx -y github:Rheinmir/custom-gsd-for-antigravity
 ```
 
-The installer prompts you to choose:
-1. **Runtime** — Claude Code, OpenCode, Gemini, or all
-2. **Location** — Global (all projects) or local (current project only)
+The installer will prompt you to choose:
+1.  **Runtime** — Antigravity, Gemini, Claude Code, or OpenCode.
+2.  **Location** — Global or local.
 
-Verify with `/gsd:help` inside your chosen runtime.
+### Updating
 
-### Staying Updated
-
-GSD evolves fast. Update periodically:
+To update to the latest code from the main branch:
 
 ```bash
-npx get-shit-done-cc@latest
+npx -y github:Rheinmir/custom-gsd-for-antigravity
 ```
 
 <details>
-<summary><strong>Non-interactive Install (Docker, CI, Scripts)</strong></summary>
+<summary><strong>Non-interactive Install</strong></summary>
 
 ```bash
-# Claude Code
-npx get-shit-done-cc --claude --global   # Install to ~/.claude/
-npx get-shit-done-cc --claude --local    # Install to ./.claude/
+# Install for Antigravity globally
+npx -y github:Rheinmir/custom-gsd-for-antigravity --antigravity --global
 
-# OpenCode (open source, free models)
-npx get-shit-done-cc --opencode --global # Install to ~/.config/opencode/
-
-# Gemini CLI
-npx get-shit-done-cc --gemini --global   # Install to ~/.gemini/
-
-# All runtimes
-npx get-shit-done-cc --all --global      # Install to all directories
+# Install for all runtimes
+npx -y github:Rheinmir/custom-gsd-for-antigravity --all --global
 ```
-
-Use `--global` (`-g`) or `--local` (`-l`) to skip the location prompt.
-Use `--claude`, `--opencode`, `--gemini`, or `--all` to skip the runtime prompt.
-
-</details>
-
-<details>
-<summary><strong>Development Installation</strong></summary>
-
-Clone the repository and run the installer locally:
-
-```bash
-git clone https://github.com/glittercowboy/get-shit-done.git
-cd get-shit-done
-node bin/install.js --claude --local
-```
-
-Installs to `./.claude/` for testing modifications before contributing.
 
 </details>
 
 ### Recommended: Skip Permissions Mode
 
-GSD is designed for frictionless automation. Run Claude Code with:
-
-```bash
-claude --dangerously-skip-permissions
-```
-
-> [!TIP]
-> This is how GSD is intended to be used — stopping to approve `date` and `git commit` 50 times defeats the purpose.
-
-<details>
-<summary><strong>Alternative: Granular Permissions</strong></summary>
-
-If you prefer not to use that flag, add this to your project's `.claude/settings.json`:
-
-```json
-{
-  "permissions": {
-    "allow": [
-      "Bash(date:*)",
-      "Bash(echo:*)",
-      "Bash(cat:*)",
-      "Bash(ls:*)",
-      "Bash(mkdir:*)",
-      "Bash(wc:*)",
-      "Bash(head:*)",
-      "Bash(tail:*)",
-      "Bash(sort:*)",
-      "Bash(grep:*)",
-      "Bash(tr:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git status:*)",
-      "Bash(git log:*)",
-      "Bash(git diff:*)",
-      "Bash(git tag:*)"
-    ]
-  }
-}
-```
-
-</details>
+For the best experience, run your agent with permissions auto-approved (yolo mode) if possible, or configure granular permissions.
 
 ---
 
@@ -490,13 +399,13 @@ GSD stores project settings in `.planning/config.json`. Configure during `/gsd:n
 
 ### Model Profiles
 
-Control which Claude model each agent uses. Balance quality vs token spend.
+Control which model capability tier each agent uses. Balance quality vs token spend.
 
 | Profile | Planning | Execution | Verification |
 |---------|----------|-----------|--------------|
-| `quality` | Opus | Opus | Sonnet |
-| `balanced` (default) | Opus | Sonnet | Sonnet |
-| `budget` | Sonnet | Sonnet | Haiku |
+| `quality` | High Reasoning | High Reasoning | Standard |
+| `balanced` (default) | High Reasoning | Standard | Standard |
+| `budget` | Standard | Standard | Fast |
 
 Switch profiles:
 ```
@@ -557,7 +466,7 @@ At milestone completion, GSD offers squash merge (recommended) or merge with his
 
 **Updating to the latest version?**
 ```bash
-npx get-shit-done-cc@latest
+npx -y github:Rheinmir/custom-gsd-for-antigravity
 ```
 
 **Using Docker or containerized environments?**
@@ -574,12 +483,12 @@ To remove GSD completely:
 
 ```bash
 # Global installs
-npx get-shit-done-cc --claude --global --uninstall
-npx get-shit-done-cc --opencode --global --uninstall
+npx -y github:Rheinmir/custom-gsd-for-antigravity --claude --global --uninstall
+npx -y github:Rheinmir/custom-gsd-for-antigravity --opencode --global --uninstall
 
 # Local installs (current project)
-npx get-shit-done-cc --claude --local --uninstall
-npx get-shit-done-cc --opencode --local --uninstall
+npx -y github:Rheinmir/custom-gsd-for-antigravity --claude --local --uninstall
+npx -y github:Rheinmir/custom-gsd-for-antigravity --opencode --local --uninstall
 ```
 
 This removes all GSD commands, agents, hooks, and settings while preserving your other configurations.
