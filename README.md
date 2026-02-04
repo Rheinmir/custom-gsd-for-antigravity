@@ -31,6 +31,16 @@ npx -y github:Rheinmir/custom-gsd-for-antigravity
 
 </div>
 
+## 🚀 Quick Install
+
+**Requirement:** Node.js (version 18+ recommended).
+
+Run this command in your terminal to **install** or **update** to the latest version:
+
+```bash
+npx -y github:Rheinmir/custom-gsd-for-antigravity
+```
+
 ---
 
 ## What This Is
