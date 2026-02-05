@@ -1,7 +1,7 @@
 {
   "name": "get-shit-done-cc",
   "version": "1.11.1",
-  "description": "A meta-prompting, context engineering and spec-driven development system for Claude Code, OpenCode and Gemini by TÂCHES.",
+  "description": "Antigravity-native workflow system for agentic coding.",
   "bin": {
     "get-shit-done-cc": "bin/install.js"
   },
@@ -14,16 +14,12 @@
     "scripts"
   ],
   "keywords": [
-    "claude",
-    "claude-code",
-    "ai",
-    "meta-prompting",
-    "context-engineering",
-    "spec-driven-development",
-    "gemini",
-    "gemini-cli"
+    "antigravity",
+    "agentic",
+    "workflows",
+    "context-engineering"
   ],
-  "author": "TÂCHES",
+  "author": "Antigravity Team",
   "license": "MIT",
   "repository": {
     "type": "git",
