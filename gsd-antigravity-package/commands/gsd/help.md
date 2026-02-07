@@ -25,13 +25,7 @@ Output ONLY the reference content below. Do NOT add:
 2. `/gsd:plan-phase 1` - Create detailed plan for first phase
 3. `/gsd:execute-phase 1` - Execute the phase
 
-## Staying Updated
 
-GSD evolves fast. Update periodically:
-
-```bash
-npx get-shit-done-cc@latest
-```
 
 ## Core Workflow
 
